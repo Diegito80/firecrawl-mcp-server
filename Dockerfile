@@ -29,7 +29,7 @@ COPY --from=builder /app/package.json /app/package.json
 COPY --from=builder /app/package-lock.json /app/package-lock.json
 
 # Install only production dependencies
-RUN npm ci --omit=dev
+RUN npm ci
 
 # Set environment variables for API key and custom API URL if needed
 ENV FIRECRAWL_API_KEY=your-api-key
